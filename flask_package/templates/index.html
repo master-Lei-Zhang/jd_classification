@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% include 'navbar.html' %}
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-6">
+                <p>Please enter your job description below </p>
+            </div>
+        </div>
+        <div class="row mt-12">
+            <div class="col-6">
+                <form method="POST">
+                    <input name="text">
+                    <input type="submit">
+                </form>
+            </div>>
+            <div class="col-6">
+                {{text_display}}
+                </form>
+            </div>>            
+        </div>
+        <div class="row mt-10">
+            {{ div_radar_chart | safe }}
+        </div>
+    </div>
+    {{ script_radar_chart | safe }}
+
+{% endblock %}
